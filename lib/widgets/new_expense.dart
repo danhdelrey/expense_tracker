@@ -36,7 +36,7 @@ class _NewExpenseState extends State<NewExpense> {
     if (_titleController.text.trim().isEmpty ||
         amountIsInvalid ||
         _selectedDate == null) {
-      showDialog(
+      showDialog( //show CupertinoDialog if on iOS platform
         context: context,
         builder: (context) => AlertDialog(
           title: Text('Invalid input!'),
